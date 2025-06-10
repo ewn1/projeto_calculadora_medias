@@ -52,7 +52,7 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal(); //aqui é preciso externalizar o resultado para o HTML, precisa de um ID na coluna td onde mostra a nota final
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2); //toFixed foi utilizado para renderizar o resultado e limitar a dizima periódica à 2 digitos apenas
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
 
